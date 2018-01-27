@@ -4,5 +4,6 @@
     {
         CopyVirus = 0,
         SlowVirus = 1,
+        InvertVirus = 2,
     }
 }
