@@ -7,8 +7,6 @@ namespace ggj2018
         [STAThread]
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             using (var game = new LabEscapeGame()) {
                 game.Run();
             }

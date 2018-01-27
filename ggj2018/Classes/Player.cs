@@ -13,6 +13,14 @@ namespace ggj2018.Classes
         private bool _isActive;
         private List<EnumVirus> _viruses;
 
+        public Player(double positionX, double positionY)
+        {
+            _positionX = positionX;
+            _positionY = positionY;
+
+            _playerId = Guid.NewGuid();
+        }
+
         public void BecomeInfected(List<EnumVirus> viruses)
         {
             if (viruses.Count == 0)
