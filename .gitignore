@@ -38,3 +38,7 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+.vs/ggj2018/v15/Server/sqlite3/db.lock
+.vs/ggj2018/v15/Server/sqlite3/storage.ide
+.vs/ggj2018/v15/Server/sqlite3/storage.ide-shm
+.vs/ggj2018/v15/Server/sqlite3/storage.ide-wal
