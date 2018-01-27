@@ -7,16 +7,25 @@ namespace ggj2018
 {
     public class LabEscapeGame: Game
     {
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Texture2D texture;
         Vector2 position;
+        float xSpeed;
+        float ySpeed;
+        GameScreen menuScreen;
+        GameScreen testScreen;
 
         public LabEscapeGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             position = new Vector2(0, 0);
+            xSpeed = 128f;
+            ySpeed = 128f;
+            menuScreen = new MenuScreen(this);
+            testScreen = new TestScreen(this);
         }
 
         /// <summary>
@@ -68,12 +77,28 @@ namespace ggj2018
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            int deltaMillis = gameTime.ElapsedGameTime.Milliseconds;
+            KeyboardState kbState = Keyboard.GetState();
+            if (kbState.IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
-            position.X += 1 * gameTime.ElapsedGameTime.Milliseconds / 5;
-            if(position.X > this.GraphicsDevice.Viewport.Width)
+            if(kbState.IsKeyDown(Keys.W))
+            {
+                position.Y -= 1 * ySpeed * deltaMillis / 1000;
+            }
+            if (kbState.IsKeyDown(Keys.S))
+            {
+                position.Y += 1 * ySpeed * deltaMillis / 1000;
+            }
+            if (kbState.IsKeyDown(Keys.A))
+            {
+                position.X -= 1 * xSpeed * deltaMillis / 1000;
+            }
+            if (kbState.IsKeyDown(Keys.D))
+            {
+                position.X += 1 * xSpeed * deltaMillis / 1000;
+            }
+            if (position.X > this.GraphicsDevice.Viewport.Width)
             {
                 position.X = 0 - texture.Width;
             }
