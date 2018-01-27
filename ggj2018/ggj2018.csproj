@@ -50,6 +50,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Player_Scientist_01_Down.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Player_Scientist_01_Left.xnb" />
+    <None Include="Content\Player_Scientist_01_Right.xnb" />
+    <None Include="Content\Player_Scientist_01_Up.xnb" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
