@@ -175,6 +175,7 @@
   <ItemGroup>
     <Content Include="icon.ico" />
     <Content Include="Resources\Level003.png" />
+    <None Include="Resources\Player_Scientist_01_Down_Dying.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

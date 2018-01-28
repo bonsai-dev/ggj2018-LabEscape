@@ -153,6 +153,16 @@ namespace ggj2018.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Player_Scientist_01_Down_Dying {
+            get {
+                object obj = ResourceManager.GetObject("Player_Scientist_01_Down_Dying", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Player_Scientist_01_Down_Infected {
             get {
                 object obj = ResourceManager.GetObject("Player_Scientist_01_Down_Infected", resourceCulture);

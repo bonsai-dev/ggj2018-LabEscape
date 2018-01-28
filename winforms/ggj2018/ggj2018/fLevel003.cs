@@ -8,6 +8,7 @@ namespace ggj2018
     public partial class fLevel003 : Form
     {
         bool heroIsInfected = false;
+        bool heroIsDead = false;
         int countdown = 5;
         string timerIsRunning = string.Empty;
         string heroFacingDirection = "S";
@@ -38,7 +39,7 @@ namespace ggj2018
 
         private void KeyDownEvent(object sender, KeyEventArgs e)
         {
-            if (heroIsInfected && timerIsRunning == string.Empty)
+            if (heroIsInfected && timerIsRunning == string.Empty && heroIsDead == false)
             {
                 if (e.KeyCode == Keys.A || e.KeyCode == Keys.W || e.KeyCode == Keys.S || e.KeyCode == Keys.D)
                 {
@@ -110,7 +111,14 @@ namespace ggj2018
 
                 if (countdown == 0)
                 {
-                    MessageBox.Show("Der Virus hat dich getötet.");
+                    picHero.Image = Properties.Resources.Player_Scientist_01_Down_Dying;
+
+                    tm.Enabled = true;
+                    timerIsRunning = "dyingHero";
+                    tm.Interval = 2;
+                    tm.Tick += new EventHandler(dying_Tick);
+
+                    heroIsDead = true;
                 }
             }
 
@@ -118,6 +126,18 @@ namespace ggj2018
             {
                 MessageBox.Show("Du hast gewonnen!");
             }
+        }
+
+        private void dying_Tick(object sender, EventArgs e)
+        {
+            if (timerIsRunning != "dyingHero")
+            {
+                tm.Stop();
+                return;
+            }
+
+            tm.Stop();
+            timerIsRunning = string.Empty;
         }
 
         private void tm_Tick(object sender, EventArgs e)
@@ -143,6 +163,7 @@ namespace ggj2018
         {
             timerIsRunning = string.Empty;
             heroIsInfected = false;
+            heroIsDead = false;
             heroFacingDirection = "S";
             picHero.Location = startPoint;
             countdown = 5;
