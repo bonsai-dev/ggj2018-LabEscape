@@ -1,0 +1,13 @@
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\bin\Debug\ggj2018.exe.config
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\bin\Debug\ggj2018.exe
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\bin\Debug\ggj2018.pdb
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.fLevel001.resources
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.fTitlescreen.resources
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.Properties.Resources.resources
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.csproj.GenerateResource.Cache
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.csproj.CoreCompileInputs.cache
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.exe
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.pdb
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.fLevel002.resources
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.fLevel003.resources
+C:\dev\thy\GGJ2018\ggj2018\ggj2018\obj\Debug\ggj2018.csprojResolveAssemblyReference.cache
